@@ -192,20 +192,24 @@ button:hover {
 .main-content {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr minmax(300px, 1fr);
+    grid-template-rows: auto 1fr;
     gap: 15px;
     padding: 35px 25px;
     overflow: auto;
 }
 
-.projects {
-    grid-row: 1 / 3;
+.main-content > div {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 10px;
 }
 
-.projects .head {
+.projects {
+    grid-row: 1 / 3;
+}
+
+.main-content .head {
     font-size: 1.33rem;
     font-weight: 600;
 }
@@ -216,11 +220,11 @@ button:hover {
     gap: 30px;
 }
 
-.projects > .content div {
+.card {
     background-color: var(--light-bg-color)
 }
 
-.content .card {
+.projects .card {
     display: grid;
     padding: 25px 15px;
     gap: 50px;
@@ -267,19 +271,32 @@ button:hover {
     background: no-repeat center url(icons/open-in-new.svg);
 }
 
-
 .announcements .content {
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px var(--box-shadow-color);
+    padding: 30px 25px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    align-items: center;
+    grid-template-rows: 1fr 1fr auto;
+    gap: 25px;
+    background-color: var(--light-bg-color);
 }
 
-.announcements > .content div {
-    height: 80px;
-    border: 1px solid black;
-    background-color: chartreuse;
+.announcements .card {
+    font-size: 0.85rem;
 }
+
+.announcements .card > .title {
+    font-size: 1rem;
+}
+
+.announcements .card:not(:last-of-type) {
+    border-bottom: 1px solid black;
+    padding-bottom: 25px;
+}
+
+
+
+
 
 .trending .content{
     display: grid;
@@ -291,5 +308,4 @@ button:hover {
 .trending > .content div {
     height: 50px;
     border: 1px solid black;
-    background-color: darkgreen;
 }
