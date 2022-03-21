@@ -6,6 +6,10 @@ In this project I learned about nesting grids, fractional units, dynamic minimum
 
 This project was created for the [Admin Dashboard assignment](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/admin-dashboard) as part of The Odin Project.
 
+## Live Demo
+
+https://murkyweb.github.io/admin-dashboard/
+
 ## Assets
 
 * icons are from https://materialdesignicons.com/
