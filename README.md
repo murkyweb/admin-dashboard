@@ -1,4 +1,4 @@
-# admin-dashboard
+Admin Dashboard
 
 An admin dashboard made only using grid.
 
