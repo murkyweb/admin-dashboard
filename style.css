@@ -226,6 +226,7 @@ button:hover {
 
 .projects .card {
     display: grid;
+    grid-template-rows: 1fr auto;
     padding: 25px 15px;
     gap: 50px;
     border-left: 8px solid var(--dark-bg-color);
@@ -294,18 +295,45 @@ button:hover {
     padding-bottom: 25px;
 }
 
-
-
-
-
 .trending .content{
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    align-items: center;
+    background-color: var(--light-bg-color);
+    box-shadow: 3px 3px 5px var(--box-shadow-color);
+    border-radius: 8px;
+    padding: 25px;
+    gap: 20px;
 }
 
-.trending > .content div {
-    height: 50px;
-    border: 1px solid black;
+.trending .profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
 }
+
+.trending img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.trending .info {
+    display: grid;
+    gap: 5px;
+}
+
+.info .project-name {
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+.trending a {
+    color: var(--dark-text-color);
+}
+
+.info .user {
+    font-weight: 500;
+}
+
